@@ -113,6 +113,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Posistion Floating Windows Left/Right
+bindsym $mod+Shift+p floating enable; border none; resize set 700px 462px; sticky disable; move window to position 709 px 230 px
+bindsym $mod+Shift+m floating enable; border none; resize set 700px 462px; sticky disable; move window to position 3 px 230 px
+
 # define names for workspaces
 set $ws1    "1:   Terminal "
 set $ws2    "2:   Code "
@@ -216,45 +220,34 @@ assign [class="TelegramDesktop"] $ws5
 assign [class="Gimp-2.10"] $ws7
 assign [class="Steam"] $ws8
 assign [class="DDNet"] $ws8
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #2b83a6 #2b83a6 #ffffff #dddddd   #2b83a6
-client.focused_inactive #212121 #212121 #86888c #292d2e   #5a5a5a
-client.unfocused        #212121 #212121 #86888c #292d2e   #5a5a5a
-client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
-client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
-client.background       #212121
+assign [class="persepolis"] $ws9
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar
-{
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+bar {
+  status_command i3blocks -c ~/.config/i3/i3blocks.conf
     font pango:Source Sans Pro-10 10
     position top
     separator_symbol        "·"
     workspace_buttons       yes
     strip_workspace_numbers yes
-
-    colors
-    {
-        background  #212121
-        statusline  #dddddd
-        separator   #666666
-        
-	    # class             border  backgr. text
-        focused_workspace   #2b83a6 #2b83a6 #ffffff
-        active_workspace    #212121 #212121 #ffffff
-        inactive_workspace  #212121 #212121 #86888c
-        urgent_workspace    #d64e4e #d64e4e #ffffff
-    }
+  colors {
+    separator #666666
+    background #000000
+    statusline #ffffff
+    focused_workspace #551a8b #551a8b #ffffff
+    active_workspace #333333 #5f676a #ffffff
+    inactive_workspace #000000 #000000 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
+
 
 # Network Manager
 exec --no-startup-id nm-applet
 
 # Background
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/redhair-girl.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/allison_argent.jpg
 
 # Change Language Layout Shortcut
 exec_always setxkbmap -layout us,ir -option 'grp:alt_shift_toggle'
@@ -275,3 +268,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 bindsym XF86AudioMute        exec pamixer -t # mute audio
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 # increase volume
 bindsym XF86AudioLowerVolume exec pamixer -d 5 # decrease volume
+
+client.focused #3b1261 #3b1261 #ffffff #662b9c
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused #222222 #222222 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
