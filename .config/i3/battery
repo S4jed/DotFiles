@@ -1,0 +1,22 @@
+#!/bin/bash
+
+STATUS_FULL=`acpi | cut -d " " -f3-5`
+STATUS=`echo "$STATUS_FULL" | cut -d ',' -f 1`
+PERCENT=`echo "$STATUS_FULL" | cut -d ',' -f 2`
+
+if [ "$STATUS" == "Unknown" ]; then
+	echo " $PERCENT"
+fi
+
+if [ "$STATUS" == "Full" ]; then
+	echo "  Full$PERCENT"
+fi
+
+if [ "$STATUS" == "Charging" ]; then
+	echo " Charging$PERCENT"
+fi
+
+if [ "$STATUS" == "Discharging" ]; then
+	echo "  Discharging$PERCENT"
+fi
+
