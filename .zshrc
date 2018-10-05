@@ -9,7 +9,6 @@ export ZSH=/usr/share/oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="sajed"
-#ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,7 +97,7 @@ plugins=(
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
 alias i3config="nano ~/.config/i3/config"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshthemeconfig="sudo nano /usr/share/oh-my-zsh/custom/themes/sajed.zsh-theme"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
