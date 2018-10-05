@@ -209,6 +209,7 @@ for_window [class="Menu"]                           floating enable
 for_window [class="Nm-connection-editor"]           floating enable
 for_window [class="Software-properties-gtk"]        floating enable
 for_window [class="feh"]			    floating enable
+for_window [class="Steam"]			    floating enable
 
 # workspace assignments
 assign [class="URxvt"] $ws1
@@ -217,29 +218,33 @@ assign [class="Google-chrome"] $ws3
 assign [class="Pcmanfm"] $ws4
 assign [class="File-roller"] $ws4
 assign [class="TelegramDesktop"] $ws5
+assign [class="vlc"] $ws6
 assign [class="Gimp-2.10"] $ws7
 assign [class="Steam"] $ws8
 assign [class="DDNet"] $ws8
+assign [class="csgo_linux64"] $ws8
 assign [class="persepolis"] $ws9
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+bar
+{
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
     font pango:Source Sans Pro-10 10
     position top
     separator_symbol        "·"
     workspace_buttons       yes
     strip_workspace_numbers yes
-  colors {
-    separator #666666
-    background #000000
-    statusline #ffffff
-    focused_workspace #551a8b #551a8b #ffffff
-    active_workspace #333333 #5f676a #ffffff
-    inactive_workspace #000000 #000000 #888888
-    urgent_workspace #2f343a #900000 #ffffff
-  }
+    colors
+    {
+        separator #666666
+        background #000000
+        statusline #ffffff
+        focused_workspace #551a8b #551a8b #ffffff
+        active_workspace #333333 #5f676a #ffffff
+        inactive_workspace #000000 #000000 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }
 
 
@@ -269,7 +274,10 @@ bindsym XF86AudioMute        exec pamixer -t # mute audio
 bindsym XF86AudioRaiseVolume exec pamixer -i 5 # increase volume
 bindsym XF86AudioLowerVolume exec pamixer -d 5 # decrease volume
 
-client.focused #3b1261 #3b1261 #ffffff #662b9c
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused #222222 #222222 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+# class                 border  backgr.	text    indicator
+client.focused		#3b1261 #3b1261	#ffffff #662b9c
+client.focused_inactive	#333333 #5f676a	#ffffff #484e50
+client.unfocused	#222222 #222222	#888888 #292d2e
+client.urgent		#2f343a #900000	#ffffff #900000
+
+
