@@ -17,7 +17,7 @@ font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -221,6 +221,7 @@ assign [class="Pcmanfm"] $ws4
 assign [class="File-roller"] $ws4
 assign [class="TelegramDesktop"] $ws5
 assign [class="vlc"] $ws6
+assign [class="Vlc"] $ws6
 assign [class="Gimp-2.10"] $ws7
 assign [class="Steam"] $ws8
 assign [class="DDNet"] $ws8
@@ -259,6 +260,9 @@ exec --no-startup-id nm-applet
 # Background
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/allison_argent.jpg
 
+# Compton
+exec_always --no-startup-id compton --config ~/.config/compton/config
+
 # Change Language Layout Shortcut
 exec_always setxkbmap -layout us,ir -option 'grp:alt_shift_toggle'
 
@@ -284,5 +288,3 @@ client.focused		#3b1261 #3b1261	#ffffff #662b9c
 client.focused_inactive	#333333 #5f676a	#ffffff #484e50
 client.unfocused	#222222 #222222	#888888 #292d2e
 client.urgent		#2f343a #900000	#ffffff #900000
-
-

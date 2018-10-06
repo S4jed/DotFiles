@@ -97,6 +97,7 @@ plugins=(
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
 alias i3config="nano ~/.config/i3/config"
+alias comptonconfig="nano ~/.config/compton/config"
 alias zshthemeconfig="sudo nano /usr/share/oh-my-zsh/custom/themes/sajed.zsh-theme"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
