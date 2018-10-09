@@ -120,9 +120,9 @@ alpha-step = 0.06;
 opacity-rule =
 [
     "80:class_g='i3bar'",
-    "85:class_g='Pcmanfm'",
+    "90:class_g='Pcmanfm'",
     "95:class_g='Code'",
-    "95:class_g='TelegramDesktop'",
+    "95:class_g='TelegramDesktop'"
 ];
 
 # Dim inactive windows. (0.0 - 1.0)

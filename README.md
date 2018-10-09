@@ -4,7 +4,7 @@
 ![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Screenshot.png)
 
 <h2>Install following packages:<h2>
-<h4>sudo pacman -S gimp galculator gcolor2 rofi zsh flameshot pcmanfm lxappearance file-roller ffmpegthumbnailer compton anydesk numix-circle-icon-theme-git</h4>
+<h4>sudo pacman -S gimp galculator gcolor2 rofi zsh flameshot pcmanfm lxappearance file-roller ffmpegthumbnailer compton anydesk numix-circle-icon-theme-git sysstat</h4>
 
 <h2>Switch shell to zsh by entering the command below:<h2>
     <h4>chsh -s $(which zsh)</h4>
