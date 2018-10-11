@@ -278,7 +278,7 @@ bar
 exec --no-startup-id nm-applet
 
 # Background
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/allison_argent.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/allison_argent.png
 
 # Compton
 exec_always --no-startup-id compton --config ~/.config/compton/config
