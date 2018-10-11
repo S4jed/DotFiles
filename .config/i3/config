@@ -234,7 +234,6 @@ assign [title="ranger"]			→ $ws4
 assign [class="Pcmanfm"]		→ $ws4
 assign [class="File-roller"]		→ $ws4
 assign [class="TelegramDesktop"]	→ $ws5
-assign [class="Steam"]			→ $ws5
 assign [class="vlc"]			→ $ws6
 assign [class="Vlc"]			→ $ws6
 assign [class="Gimp-2.10"]		→ $ws7
@@ -245,7 +244,7 @@ assign [class="persepolis"]		→ $ws9
 assign [class="Anydesk"]		→ $ws9
 assign [class="Lxappearance"]		→ $ws10
 assign [class="Pavucontrol"]		→ $ws10
-assign [class="Blueberry.py"]		→ $ws10
+#assign [class="Blueberry.py"]		→ $ws10
 
 client.focused		#2c3e50 #2c3e50	#ffffff #2c3e50
 client.focused_inactive	#333333 #5f676a	#ffffff #484e50
