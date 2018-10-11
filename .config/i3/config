@@ -224,7 +224,13 @@ for_window [class="Nm-connection-editor"]		floating enable
 for_window [class="Software-properties-gtk"]		floating enable
 for_window [class="feh"]				floating enable
 for_window [class="persepolis"]				floating enable
-for_window [class="Blueberry.py"]			floating enable
+for_window [class="Steam" title="Steam - News"]		floating enable
+#for_window [class="Blueberry.py"]			floating enable
+
+# assign specific windows to workspaces
+for_window [class="URxvt" title="vim$"] move to workspace			$ws2
+for_window [class="URxvt" title="ranger$"] move to workspace			$ws4
+for_window [class="Steam" title="Friends List"] move to workspace		$ws5
 
 # workspace assignments
 assign [class="URxvt"]			→ $ws1
@@ -296,7 +302,8 @@ bindsym --release $mod+Print exec flameshot gui -p $HOME/Multi\ Media/Pictures
 bindsym --release $mod+Shift+l exec i3lock -i ~/.config/wallpaper/lockscreen.png -t
 
 # File Manager
-bindsym --release $mod+e exec pcmanfm
+#bindsym --release $mod+e exec pcmanfm
+bindsym --release $mod+e exec i3-sensible-terminal -e ranger
 
 # XF86 Shortcuts
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
