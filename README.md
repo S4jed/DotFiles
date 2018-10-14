@@ -1,11 +1,8 @@
 # i3-config
 <h1 align="center">My Personal i3 Configurations for Arch Linux ❤ ~/</h1>
 
-![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Screenshot-2018-10-11.png)
+![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Screenshot-2018-Oct-15.png)
 
-<h2>Install following packages:<h2>
-<h4>sudo pacman -S gimp galculator gcolor2 rofi zsh flameshot pcmanfm lxappearance file-roller ffmpegthumbnailer compton anydesk 
-numix-circle-icon-theme-git sysstat libx11 lib32-libx11 cmake gdb git sdl2 xdotool conky ranger</h4>
-
-<h2>Switch shell to zsh by entering the command below:<h2>
-    <h4>chsh -s $(which zsh)</h4>
+<h2>Packages:<h2>
+<h4>sudo pacman -S i3-gaps i3blocks i3lock i3status traceroute trizen gimp galculator gcolor2 rofi zsh flameshot lxappearance file-roller ffmpegthumbnailer compton anydesk archlinux-themes-slim sysstat libx11 lib32-libx11 cmake gdb git sdl2 xdotool conky ranger imagemagick windscribe-cli lightdm lightdm-webkit2-greeter nmap metasploit macchanger traceroute wine firefox udiskie python python-pip</h4>
+<h4>trizen -S ship numix-circle-icon-theme-git lightdm-webkit-theme-aether</h4>

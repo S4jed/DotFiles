@@ -120,8 +120,6 @@ alpha-step = 0.06;
 opacity-rule =
 [
     "80:class_g='i3bar'",
-    "90:class_g='Pcmanfm'",
-    "95:class_g='Code'",
     "95:class_g='TelegramDesktop'"
 ];
 
