@@ -1,6 +1,6 @@
 ! urxvt
 
-URxvt.geometry:                115x40
+URxvt.geometry:                100x30
 URxvt.font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
 URxvt.boldFont: xft:Inconsolata:bold:pixelsize=17:antialias=false:hinting=true
 URxvt.depth:                24
@@ -9,7 +9,7 @@ URxvt.scrollBar:            false
 URxvt.saveLines:  2000
 URxvt.transparent:      true
 URxvt.shading: 10
-
+#URxvt.letterSpace: -1
 ! Cursor underline
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1

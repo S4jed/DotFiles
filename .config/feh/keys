@@ -1,0 +1,10 @@
+next_img Right
+prev_img Left
+
+scroll_up Up
+scroll_down Down
+scroll_right Right
+scroll_left Left
+
+toggle_fullscreen f
+save_filelist F
