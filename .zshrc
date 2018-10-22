@@ -97,10 +97,9 @@ plugins=(
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
 alias i3config="nano ~/.config/i3/config"
-alias i3blocksconfig="nano ~/.config/i3/i3blocks.conf"
+alias i3blocksconfig="nano ~/.config/i3blocks/config"
 alias comptonconfig="nano ~/.config/compton/config"
 alias zshthemeconfig="sudo nano /usr/share/oh-my-zsh/custom/themes/sajed.zsh-theme"
-alias conkyconfig="nano ~/.config/i3/conky"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

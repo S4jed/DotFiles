@@ -52,7 +52,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run -width 400 -lines 5 -separator-style "none"
 
 # locker
-set $locker exec i3lock -i ~/.config/wallpaper/lockscreen.png -t
+set $locker exec i3lock -i ~/Pictures/LockScreen.png -t
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -233,14 +233,14 @@ for_window [class="VirtualBox Machine"]				move to workspace $ws9, focus
 for_window [class="VirtualBox Manager"]				move to workspace $ws9, focus
 for_window [class="VirtualBox"]					move to workspace $ws9, focus
 for_window [class="Wireshark-gtk"]				move to workspace $ws9, focus
+for_window [class="Variety"]					move to workspace $ws9, focus
 for_window [class="org.remmina.Remmina"]			move to workspace $ws9, floating enable, focus
 for_window [class="Lxappearance"]				move to workspace $ws10, floating enable, focus
 for_window [class="Pavucontrol"]				move to workspace $ws10, floating enable, focus
 for_window [class="feh"]					floating enable
 for_window [class="Steam" title="Steam - News"]			floating enable
 for_window [class="Steam" title="Steam - Self Updater"]		floating enable
-for_window [class="Galculator"]					floating enable
-for_window [class="Gcolor2"]					floating enable
+for_window [class="Gnome-calculator"]				floating enable
 for_window [window_role="app"]					floating enable
 for_window [window_role="pop-up"]				floating enable
 for_window [window_role="task_dialog"]				floating enable
@@ -258,7 +258,7 @@ client.urgent		#2f343a #900000	#ffffff #900000
 # finds out, if available)
 bar
 {
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command i3blocks -c ~/.config/i3blocks/config
     font pango:Source Sans Pro-10 10
     position top
     separator_symbol        "·"
@@ -276,14 +276,17 @@ bar
     }
 }
 
+# Variety
+exec --no-startup-id variety
+
 # Network Manager
 exec --no-startup-id nm-applet
 
-# Background
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/allison_argent.png
-
-# Compton
+# Composite Manager
 exec_always --no-startup-id compton --config ~/.config/compton/config
+
+# Notification Manager
+exec_always --no-startup-id dunst
 
 # udiskie
 exec --no-startup-id udiskie -saF
@@ -293,7 +296,7 @@ exec_always setxkbmap -layout us,ir -option 'grp:alt_shift_toggle'
 
 # Screenshot Shortcuts
 bindsym --release Print exec flameshot full -c
-bindsym --release $mod+Print exec flameshot gui -p $HOME/Multi\ Media/Pictures/Screenshots
+bindsym --release $mod+Print exec flameshot gui -p $HOME/Pictures/Screenshots
 
 # Screen Lock
 bindsym --release $mod+Shift+l $locker

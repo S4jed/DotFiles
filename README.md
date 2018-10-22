@@ -1,8 +1,11 @@
-# i3-config
-<h1 align="center">My Personal i3 Configurations for Arch Linux ❤ ~/</h1>
+# i3-gaps config
+<h1 align="center">My Personal i3-gaps configurations for Arch Linux</h1>
 
-![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Screenshot-2018-Oct-18.png)
+![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
 
-<h2>Packages:<h2>
-<h4>sudo pacman -S i3-gaps i3blocks i3lock i3status traceroute trizen gimp galculator gcolor2 rofi zsh pamixer flameshot lxappearance file-roller ffmpegthumbnailer compton anydesk archlinux-themes-slim sysstat libx11 lib32-libx11 cmake gdb git sdl2 xdotool conky ranger imagemagick windscribe-cli lightdm lightdm-webkit2-greeter nmap metasploit macchanger traceroute wine firefox udiskie python python-pip mysql mysql-clients php php-apache visual-studio-code-bin wireshark-gtk qutebrowser remmina freerdp libvncserver</h4>
-<h4>trizen -S ship numix-circle-icon-theme-git lightdm-webkit-theme-aether heidisql xampp</h4>
+<h2>Auto Installation: <h2>
+<h4>Run Install.sh</h4>
+<br><br>
+
+<h2>Manual Script Installations: </h2>
+<h4>Go to Scripts Directory and execute the script you want to install. For instance: ./Install-ZSH.sh</h4>
