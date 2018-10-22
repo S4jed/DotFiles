@@ -4,7 +4,10 @@ echo [+] Installing Development Tools
 sudo pacman -S git cmake --noconfirm --needed
 
 echo [+] Installing Trizen for UnOfficial Packages
-git clone https://aur.archlinux.org/trizen.git && cd trizen && makepkg -si
+git clone https://aur.archlinux.org/trizen.git && cd trizen && makepkg -si --noconfirm --needed
+
+echo [+] Cleaning up Trizen\'s Cloned directory
+cd ../ && sudo rm -rf trizen
 
 echo [+] Making a backup from previous ~/Pictures if exists
 [ -d ~/Pictures ] && sudo mv ~/Pictures ~/Pictures.$(date +%s).bak
