@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing VLC Player
 sudo pacman -S vlc --noconfirm --needed

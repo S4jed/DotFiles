@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing Development Tools
 sudo pacman -S git cmake --noconfirm --needed

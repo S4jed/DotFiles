@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing lxappearance
 sudo pacman -S lxappearance --noconfirm --needed

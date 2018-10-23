@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cp ../.local/share/fonts ~/.local/share -r
 fc-cache -fv

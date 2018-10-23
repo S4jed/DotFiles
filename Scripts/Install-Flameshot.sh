@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing Flameshot
 sudo pacman -S flameshot --noconfirm --needed

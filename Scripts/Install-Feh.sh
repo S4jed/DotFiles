@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing Feh
 sudo pacman -S feh --noconfirm --needed

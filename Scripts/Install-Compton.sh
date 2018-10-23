@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing Compton compositor
 sudo pacman -S compton --noconfirm --needed

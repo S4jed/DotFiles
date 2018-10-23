@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing URxvt Terminal and Perl Modules for URxvt
 sudo pacman -S rxvt-unicode urxvt-perls --noconfirm --needed

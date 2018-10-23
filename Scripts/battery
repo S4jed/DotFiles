@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 STATUS_FULL=`acpi | cut -d " " -f3-5`
 STATUS=`echo "$STATUS_FULL" | cut -d ',' -f 1`

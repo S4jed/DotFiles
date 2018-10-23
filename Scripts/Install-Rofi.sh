@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing Rofi
 sudo pacman -S rofi --noconfirm --needed

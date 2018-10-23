@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo [+] Installing ZSH
 sudo pacman -S zsh --noconfirm --needed
