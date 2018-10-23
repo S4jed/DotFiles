@@ -8,16 +8,16 @@ RESET=`tput sgr0`
 echo ${BOLD}${CYAN}[+] Installing Development Tools${RESET}
 sudo pacman -S git cmake --noconfirm --needed
 
-AurMan()
+Trizen()
 {
-    echo ${BOLD}${CYAN}[+] Installing AurMan for Aur Packages${RESET}
-    git clone https://aur.archlinux.org/aurman.git && cd aurman && makepkg -si --noconfirm --needed
+    echo ${BOLD}${CYAN}[+] Installing Trizen for Aur Packages${RESET}
+    git clone https://aur.archlinux.org/trizen.git && cd trizen && makepkg -si --noconfirm --needed
 
-    echo ${BOLD}${CYAN}[+] Cleaning up AurMan\'s Cloned directory${RESET}
-    cd ../ && sudo rm -rf aurman
+    echo ${BOLD}${CYAN}[+] Cleaning up Trizen\'s Cloned directory${RESET}
+    cd ../ && sudo rm -rf trizen
 }
 
-[ -f /usr/bin/aurman ] || AurMan
+[ -f /usr/bin/trizen ] || Trizen
 
 echo ${BOLD}${CYAN}[+] Making a backup from previous ~/Pictures if exists${RESET}
 [ -d ~/Pictures ] && sudo mv ~/Pictures ~/Pictures.$(date +%s).bak
