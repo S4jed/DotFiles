@@ -1,22 +1,27 @@
 #!/bin/sh
 
-echo [+] Installing ZSH
+# Colors
+CYAN=`tput setaf 6`
+BOLD=`tput bold`
+RESET=`tput sgr0`
+
+echo ${BOLD}${CYAN}[+] Installing ZSH${RESET}
 sudo pacman -S zsh --noconfirm --needed
 
-echo [+] Installing Oh-My-ZSH
+echo ${BOLD}${CYAN}[+] Installing Oh-My-ZSH${RESET}
 trizen -S oh-my-zsh-git --noconfirm --needed
 
-echo [+] Copying theme to ZSH\'s custom themes directory
+echo ${BOLD}${CYAN}[+] Copying theme to ZSH\'s custom themes directory${RESET}
 sudo cp ../.oh-my-zsh/custom/themes $ZSH_CUSTOM/ -r
 
-echo [+] Cloning zsh-completions to ZSH\'s plugins directory
+echo ${BOLD}${CYAN}[+] Cloning zsh-completions to ZSH\'s plugins directory${RESET}
 [ -d $ZSH/plugins/zsh-completions ] || sudo git clone https://github.com/zsh-users/zsh-completions.git $ZSH/plugins/zsh-completions
 
-echo [+] Cloning zsh-autosuggestions to ZSH\'s plugins directory
+echo ${BOLD}${CYAN}[+] Cloning zsh-autosuggestions to ZSH\'s plugins directory${RESET}
 [ -d $ZSH/plugins/zsh-autosuggestions ] || sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/plugins/zsh-autosuggestions
 
-echo [+] Making a backup from previous ZSH resource if exists
+echo ${BOLD}${CYAN}[+] Making a backup from previous ZSH resource if exists${RESET}
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.$(date +%s).bak
 
-echo [+] Copying zsh resource to home directory
+echo ${BOLD}${CYAN}[+] Copying zsh resource to home directory${RESET}
 cp ../.zshrc ~

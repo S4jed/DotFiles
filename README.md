@@ -1,5 +1,4 @@
-# i3-gaps config
-<h1 align="center">My Personal i3-gaps configurations for Arch Linux</h1>
+<h1 align="center">My Customized Arch Linux DotFiles</h1>
 
 ![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
 
