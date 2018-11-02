@@ -210,12 +210,11 @@ mode "resize"
 for_window [class="URxvt"]					move to workspace $ws1, focus
 for_window [class="URxvt" title="^vim"]				move to workspace $ws2, focus
 for_window [class="Code"]					move to workspace $ws2, focus
-for_window [class="Google-chrome"]				move to workspace $ws3, focus
-for_window [class="qutebrowser"]				move to workspace $ws3, focus
+for_window [class="URxvt" title="qtcreator_process_stub"]	move to workspace $ws2, focus
+for_window [class="QtCreator"]					move to workspace $ws2, focus
+for_window [class="jetbrains-rider"]				move to workspace $ws2, focus
 for_window [class="Firefox"]					move to workspace $ws3, focus
-for_window [class="Tor Browser"]				move to workspace $ws3, focus
 for_window [class="URxvt" title="^ranger"]			move to workspace $ws4, focus
-for_window [class="File-roller"]				move to workspace $ws4, floating enable, focus
 for_window [class="TelegramDesktop"]				move to workspace $ws5, focus
 for_window [class="TelegramDesktop" title="Media viewer"]	move to workspace $ws5, fullscreen, focus
 for_window [class="Telegram-desktop" title="Choose files"]	move to workspace $ws5, fullscreen, focus
@@ -232,9 +231,9 @@ for_window [class="TeamSpeak 3"]				move to workspace $ws9, focus
 for_window [class="VirtualBox Machine"]				move to workspace $ws9, focus
 for_window [class="VirtualBox Manager"]				move to workspace $ws9, focus
 for_window [class="VirtualBox"]					move to workspace $ws9, focus
-for_window [class="Wireshark-gtk"]				move to workspace $ws9, focus
+for_window [class="Wireshark"]					move to workspace $ws9, focus
 for_window [class="Variety"]					move to workspace $ws9, focus
-for_window [class="org.remmina.Remmina"]			move to workspace $ws9, floating enable, focus
+for_window [class="xfreerdp"]					move to workspace $ws9, floating enable, focus
 for_window [class="Lxappearance"]				move to workspace $ws10, floating enable, focus
 for_window [class="Pavucontrol"]				move to workspace $ws10, floating enable, focus
 for_window [class="feh"]					floating enable

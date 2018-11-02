@@ -5,29 +5,10 @@ CYAN=`tput setaf 6`
 BOLD=`tput bold`
 RESET=`tput sgr0`
 
-echo ${BOLD}${CYAN}[+] Installing Development Tools${RESET}
-sudo pacman -S git cmake --noconfirm --needed
-
-Trizen()
-{
-    echo ${BOLD}${CYAN}[+] Installing Trizen for Aur Packages${RESET}
-    git clone https://aur.archlinux.org/trizen.git && cd trizen && makepkg -si --noconfirm --needed
-
-    echo ${BOLD}${CYAN}[+] Cleaning up Trizen\'s Cloned directory${RESET}
-    cd ../ && sudo rm -rf trizen
-}
-
-[ -f /usr/bin/trizen ] || Trizen
-
-echo ${BOLD}${CYAN}[+] Making a backup from previous ~/Pictures if exists${RESET}
-[ -d ~/Pictures ] && sudo mv ~/Pictures ~/Pictures.$(date +%s).bak
-
-echo ${BOLD}${CYAN}[+] Copying Pictures to ~/Pictures${RESET}
-sudo cp ./Pictures ~ -r
-
 echo ${BOLD}${CYAN}[+] Changing directory to Scripts${RESET}
 cd ./Scripts/
 
+./Install-Trizen.sh
 ./Install-Appearance.sh
 ./Install-Fonts.sh
 ./Install-ZSH.sh
@@ -40,6 +21,9 @@ cd ./Scripts/
 ./Install-Flameshot.sh
 ./Install-NeoFetch.sh
 ./Install-VLC.sh
+
+echo ${BOLD}${CYAN}[+] Installing CMake${RESET}
+sudo pacman -S cmake --noconfirm --needed
 
 echo ${BOLD}${CYAN}[+] Installing Tor Service${RESET}
 sudo pacman -S tor --noconfirm --needed
@@ -65,20 +49,46 @@ sudo pacman -S udiskie --noconfirm --needed
 echo ${BOLD}${CYAN}[+] Installing Necessary Packages for i3blocks${RESET}
 sudo pacman -S sysstat acpi --noconfirm --needed
 
-echo ${BOLD}${CYAN}[+] Making a backup from previous i3 config if exists${RESET}
-[ -d ~/.config/i3 ] && sudo mv ~/.config/i3 ~/.config/i3.$(date +%s).bak
+I3-Backup()
+{
+    echo ${BOLD}${CYAN}[+] Making a backup from previous i3 config${RESET}
+    mv ~/.config/i3 ~/.config/i3.$(date +%s).bak
+}
+
+[ -d ~/.config/i3 ] && I3-Backup
 
 echo ${BOLD}${CYAN}[+] Copying i3 Config${RESET}
 sudo cp ../.config/i3 ~/.config -r
 
-echo ${BOLD}${CYAN}[+] Making a backup from previous i3blocks battery script if exists${RESET}
-[ -f /usr/lib/i3blocks/battery ] && sudo mv /usr/lib/i3blocks/battery /usr/lib/i3blocks/battery.$(date +%s).bak
+BatteryScript-Backup()
+{
+    echo ${BOLD}${CYAN}[+] Making a backup from previous i3blocks battery script${RESET}
+    mv ~/.config/i3blocks ~/.config/i3blocks.$(date +%s).bak
+}
+
+[ -f /usr/lib/i3blocks/battery ] && BatteryScript-Backup
 
 echo ${BOLD}${CYAN}[+] Copying i3blocks battery script${RESET}
 sudo cp ./battery /usr/lib/i3blocks
 
-echo ${BOLD}${CYAN}[+] Making a backup from previous i3blocks config if exists${RESET}
-[ -d ~/.config/i3blocks ] && mv ~/.config/i3blocks ~/.config/i3blocks.$(date +%s).bak
+I3Blocks-Backup()
+{
+    echo ${BOLD}${CYAN}[+] Making a backup from previous i3blocks config${RESET}
+    mv ~/.config/i3blocks ~/.config/i3blocks.$(date +%s).bak
+}
+
+[ -d ~/.config/i3blocks ] && I3Blocks-Backup
 
 echo ${BOLD}${CYAN}[+] Copying i3blocks Config${RESET}
 sudo cp ../.config/i3blocks ~/.config -r
+
+Pictures-Backup()
+{
+    echo ${BOLD}${CYAN}[+] Making a backup from previous ~/Pictures${RESET}
+    mv ~/Pictures ~/Pictures.$(date +%s).bak
+}
+
+[ -d ~/Pictures ] && Pictures-Backup
+
+echo ${BOLD}${CYAN}[+] Copying Pictures to ~/Pictures${RESET}
+sudo cp ./Pictures ~ -r
