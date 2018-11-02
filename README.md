@@ -1,10 +1,24 @@
-<h1 align="center">My Customized Arch Linux DotFiles</h1>
+# My Personal DotFiles for Arch Linux
 
-![Screenshot](https://raw.githubusercontent.com/SajedMohseni/i3-config/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
+![Screenshot](https://github.com/SajedMohseni/DotFiles/raw/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
 
-<h2>Auto Installation: <h2>
-<h4>Run Install.sh</h4>
-<br><br>
+## Installation
 
-<h2>Manual Script Installations: </h2>
-<h4>Go to Scripts Directory and execute the script you want to install. For instance: ./Install-ZSH.sh</h4>
+**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+### Using Git
+
+You can clone the repository wherever you want. (I like to keep it in `~/Projects/DotFiles`)
+
+```bash
+git clone https://github.com/SajedMohseni/DotFiles.git && cd DotFiles && ./Install.sh
+```
+
+## Feedback
+
+Suggestions/Improvements are
+[welcome](https://github.com/SajedMohseni/DotFiles/issues)!
+
+## Author
+
+[Sajed Mohseni](mailto:S4jed@ProtonMail.com)
