@@ -207,46 +207,46 @@ mode "resize"
 }
 
 # assign specific windows to workspaces
-for_window [class="URxvt"]					move to workspace $ws1, focus
-for_window [class="URxvt" title="^vim"]				move to workspace $ws2, focus
-for_window [class="Code"]					move to workspace $ws2, focus
+for_window [class="URxvt"]                                  move to workspace $ws1, focus
+for_window [class="URxvt" title="^vim"]				        move to workspace $ws2, focus
+for_window [class="Code"]					                move to workspace $ws2, focus
 for_window [class="URxvt" title="qtcreator_process_stub"]	move to workspace $ws2, focus
-for_window [class="QtCreator"]					move to workspace $ws2, focus
-for_window [class="jetbrains-rider"]				move to workspace $ws2, focus
-for_window [class="Firefox"]					move to workspace $ws3, focus
-for_window [class="URxvt" title="^ranger"]			move to workspace $ws4, focus
-for_window [class="TelegramDesktop"]				move to workspace $ws5, focus
+for_window [class="QtCreator"]					            move to workspace $ws2, focus
+for_window [class="jetbrains-rider"]		        		move to workspace $ws2, focus
+for_window [class="Firefox"]			            		move to workspace $ws3, focus
+for_window [class="URxvt" title="^ranger"]		        	move to workspace $ws4, focus
+for_window [class="TelegramDesktop"]			        	move to workspace $ws5, focus
 for_window [class="TelegramDesktop" title="Media viewer"]	move to workspace $ws5, fullscreen, focus
 for_window [class="Telegram-desktop" title="Choose files"]	move to workspace $ws5, fullscreen, focus
-for_window [class="Steam" title="Friends List"]			move to workspace $ws5, focus
-for_window [class="vlc"]					move to workspace $ws6, focus
-for_window [class="Vlc"]					move to workspace $ws6, focus
-for_window [class="Gimp-2.10"]					move to workspace $ws7, focus
-for_window [class="Steam"]					move to workspace $ws8, focus
-for_window [class="DDNet"]					move to workspace $ws8, focus
-for_window [class="csgo_linux64"]				move to workspace $ws8, focus
-for_window [class="persepolis"]					move to workspace $ws9, focus, border normal
-for_window [class="Anydesk"]					move to workspace $ws9, focus
-for_window [class="TeamSpeak 3"]				move to workspace $ws9, focus
-for_window [class="VirtualBox Machine"]				move to workspace $ws9, focus
-for_window [class="VirtualBox Manager"]				move to workspace $ws9, focus
-for_window [class="VirtualBox"]					move to workspace $ws9, focus
-for_window [class="Wireshark"]					move to workspace $ws9, focus
-for_window [class="Variety"]					move to workspace $ws9, focus
-for_window [class="xfreerdp"]					move to workspace $ws9, floating enable, focus
-for_window [class="Lxappearance"]				move to workspace $ws10, floating enable, focus
-for_window [class="Pavucontrol"]				move to workspace $ws10, floating enable, focus
-for_window [class="feh"]					floating enable
-for_window [class="Steam" title="Steam - News"]			floating enable
+for_window [class="Steam" title="Friends List"]		    	move to workspace $ws5, focus
+for_window [class="vlc"]				                   	move to workspace $ws6, focus
+for_window [class="Vlc"]				                	move to workspace $ws6, focus
+for_window [class="Gimp-2.10"]				            	move to workspace $ws7, focus
+for_window [class="Steam"]			                		move to workspace $ws8, focus
+for_window [class="DDNet"]			                		move to workspace $ws8, focus
+for_window [class="csgo_linux64"]		            		move to workspace $ws8, focus
+for_window [class="persepolis"]		            			move to workspace $ws9, focus, border normal
+for_window [class="Anydesk"]				            	move to workspace $ws9, focus
+for_window [class="TeamSpeak 3"]		            		move to workspace $ws9, focus
+for_window [class="VirtualBox Machine"]		        		move to workspace $ws9, focus
+for_window [class="VirtualBox Manager"]		        		move to workspace $ws9, focus
+for_window [class="VirtualBox"]				            	move to workspace $ws9, focus
+for_window [class="Wireshark"]				               	move to workspace $ws9, focus
+for_window [class="Variety"]					            move to workspace $ws9, focus
+for_window [class="xfreerdp"]					            move to workspace $ws9, floating enable, focus
+for_window [class="Lxappearance"]		            		move to workspace $ws10, floating enable, focus
+for_window [class="Pavucontrol"]		               		move to workspace $ws10, floating enable, focus
+for_window [class="feh"]					                floating enable
+for_window [class="Steam" title="Steam - News"]		    	floating enable
 for_window [class="Steam" title="Steam - Self Updater"]		floating enable
-for_window [class="Gnome-calculator"]				floating enable
-for_window [window_role="app"]					floating enable
-for_window [window_role="pop-up"]				floating enable
-for_window [window_role="task_dialog"]				floating enable
-for_window [title="Preferences$"]				floating enable
-for_window [class="Menu"]					floating enable
-for_window [class="Nm-connection-editor"]			floating enable
-for_window [class="Software-properties-gtk"]			floating enable
+for_window [class="Gnome-calculator"]				        floating enable
+for_window [window_role="app"]				               	floating enable
+for_window [window_role="pop-up"]				            floating enable
+for_window [window_role="task_dialog"]				        floating enable
+for_window [title="Preferences$"]				            floating enable
+for_window [class="Menu"]					                floating enable
+for_window [class="Nm-connection-editor"]			        floating enable
+for_window [class="Software-properties-gtk"]                floating enable
 
 client.focused		#2c3e50 #2c3e50	#ffffff #2c3e50
 client.focused_inactive	#333333 #5f676a	#ffffff #484e50
@@ -309,9 +309,11 @@ bindsym --release $mod+Shift+l $locker
 # File Manager (Console)
 bindsym --release $mod+e exec i3-sensible-terminal -e ranger
 
-# XF86 Shortcuts
+# Brightness Control
 bindsym XF86MonBrightnessUp	exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown	exec xbacklight -dec 10 # decrease screen brightness
+
+# Volume Control
 bindsym XF86AudioMute        	exec pamixer -t # mute audio
 bindsym XF86AudioRaiseVolume 	exec pamixer -i 5 # increase volume
 bindsym XF86AudioLowerVolume 	exec pamixer -d 5 # decrease volume
