@@ -275,7 +275,10 @@ bar
     }
 }
 
-# Variety
+# Feh (Static Bg Wallpaper)
+exec_always --no-startup-id feh --bg-fill ~/Pictures/road.jpg
+
+# Variety (Dynamic Bg Wallpaper)
 exec --no-startup-id variety
 
 # Network Manager
@@ -300,7 +303,10 @@ bindsym --release $mod+Print exec flameshot gui -p $HOME/Pictures/Screenshots
 # Screen Lock
 bindsym --release $mod+Shift+l $locker
 
-# File Manager
+# File Manager (GUI)
+#bindsym --release $mod+e exec pcmanfm
+
+# File Manager (Console)
 bindsym --release $mod+e exec i3-sensible-terminal -e ranger
 
 # XF86 Shortcuts
