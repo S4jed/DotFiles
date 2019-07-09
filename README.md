@@ -1,6 +1,6 @@
 # My Personal DotFiles for Arch Linux
 
-![Screenshot](https://github.com/SajedMohseni/DotFiles/raw/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
+![Screenshot](https://github.com/S4jed/DotFiles/raw/master/Pictures/Screenshots/Screenshot-2018-Oct-22_19.png)
 
 ## Installation
 
@@ -11,13 +11,13 @@
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/DotFiles`)
 
 ```bash
-git clone https://github.com/SajedMohseni/DotFiles.git && cd DotFiles && ./Install.sh
+git clone https://github.com/S4jed/DotFiles.git && cd DotFiles && ./Install.sh
 ```
 
 ## Feedback
 
 Suggestions/Improvements are
-[welcome](https://github.com/SajedMohseni/DotFiles/issues)!
+[welcome](https://github.com/S4jed/DotFiles/issues)!
 
 ## Author
 
